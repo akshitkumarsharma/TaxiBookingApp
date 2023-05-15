@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerScreen">
+
+    <fragment
+        android:id="@+id/registerScreen"
+        android:name="com.example.taxibooking.presentation.screen.register.RegisterScreen"
+        android:label="fragment_register_screen"
+        tools:layout="@layout/fragment_register_screen">
+        <action
+            android:id="@+id/action_registerScreen_to_phoneVerificationScreen"
+            app:destination="@id/phoneVerificationScreen"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim" />
+        <action
+            android:id="@+id/action_registerScreen_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneVerificationScreen"
+        android:name="com.example.taxibooking.presentation.screen.register.PhoneVerificationScreen"
+        android:label="PhoneVerificationScreen"
+        tools:layout="@layout/fragment_phone_verification_screen">
+        <argument
+            android:name="phoneNumber"
+            app:argType="long" />
+
+        <argument
+            android:name="userType"
+            app:argType="com.example.taxibooking.domain.model.UserType" />
+
+        <argument
+            android:name="seats"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_phoneVerificationScreen_to_mailScreen"
+            app:destination="@id/mailScreen"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/mailScreen"
+        android:name="com.example.taxibooking.presentation.screen.register.MailScreen"
+        android:label="MailScreen"
+        tools:layout="@layout/fragment_mail_screen">
+        <action
+            android:id="@+id/action_mailScreen_to_mapFragment"
+            app:destination="@id/mapFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+        <argument
+            android:name="userType"
+            app:argType="com.example.taxibooking.domain.model.UserType" />
+        <argument
+            android:name="seats"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.taxibooking.presentation.screen.map_screen.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Widget.BottomSheet"
+    android:background="@drawable/bottom_sheet_background"
+    android:paddingBottom="40dp"
+    android:paddingHorizontal="10dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cashOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:text="Cash"
+        android:background="@drawable/button_background_teal_200"
+        android:drawableStart="@drawable/ic_wallet"
+        android:padding="16dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/taxiSeats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="4"
+        android:textStyle="bold"
+        android:background="@drawable/button_background_teal_200"
+        android:drawableStart="@drawable/baseline_airline_seat_recline_normal_24"
+        android:padding="16dp"
+        android:clickable="false"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/cashOption"
+        app:layout_constraintTop_toTopOf="@id/cashOption"
+        app:layout_constraintBottom_toBottomOf="@id/cashOption"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/callTaxiButton"
+        android:layout_width="0dp"
+        android:background="@color/yellow"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Call Taxi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cashOption"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

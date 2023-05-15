@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    tools:context=".presentation.screen.register.RegisterScreen">
+
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/hey_there"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/registerTitleContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_the_4_digit_code_sent_to_your_nmobile_number"
+        android:textColor="@color/register_title_content"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/registerTitle"
+        app:layout_constraintTop_toBottomOf="@id/registerTitle" />
+
+    <TextView
+        android:id="@+id/registerPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="+94 71 878 6729"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/registerTitleContent"
+        app:layout_constraintTop_toBottomOf="@id/registerTitleContent" />
+
+    <LinearLayout
+        android:id="@+id/llNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/registerPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@id/registerPhoneNumber">
+
+        <EditText
+            android:id="@+id/firstDigit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:textAlignment="center"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/secondDigit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:textAlignment="center"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/thirdDigit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:textAlignment="center"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/fourthDigit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:textAlignment="center"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/fifthDigit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:textAlignment="center"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/sixthDigit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:textAlignment="center"/>
+
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/next"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llNumber" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
